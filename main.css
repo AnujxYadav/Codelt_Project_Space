@@ -11,28 +11,42 @@ body {
   overflow-x: hidden;
 }
 
-
 @keyframes animatedBackground {
-    from { background-position: 0 0; }
-    to { background-position: 100% 0; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
 @keyframes animatedBackground2 {
-    from { background-position: 100% 0; }
-    to { background-position: 0% 0; }
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0% 0;
+  }
 }
-.bg-space   { 
-    background-image: url("https://user-images.githubusercontent.com/76813122/150682239-7d009507-013b-4bd9-9573-758f6d725fe5.jpg");
-    background-position: 0px 0px;
-    background-repeat: repeat-x;
-    animation: animatedBackground 40s linear infinite;
-    animation-fill-mode: forwards;
+.bg-space {
+  background-image: url("https://user-images.githubusercontent.com/76813122/150682239-7d009507-013b-4bd9-9573-758f6d725fe5.jpg");
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 40s linear infinite;
+  animation-fill-mode: forwards;
 }
 
 .bg-space-red {
   background-image: url("https://user-images.githubusercontent.com/76813122/150682719-334d6751-3f66-4278-9a6f-76e2b56a19f5.jpg");
   background-position: 0px 0px;
-    background-repeat: repeat-x;
-    animation: animatedBackground2 200s linear infinite;
+  background-repeat: repeat-x;
+  animation: animatedBackground2 200s linear infinite;
+}
+
+.bg-space-members {
+  background-image: url("https://user-images.githubusercontent.com/76813122/150688658-68aa1a75-d868-46a0-829a-29a5139bb0e5.jpg");
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 150s linear infinite;
 }
 
 .tranparent-bg {
@@ -132,6 +146,53 @@ body {
   color: rgb(194, 78, 25);
 }
 
+.title-style-black:hover {
+  transition-duration: 0.3s;
+  letter-spacing: 4px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+
+
+@keyframes rocket-fly {
+    0%{
+        transform: translate(0px,0px);
+    }
+    25%{
+        transform: translate(205px,-80px);
+        /* transform: translateY(20px); */
+    }
+    50%{
+        transform: translate(255px,-120px);
+        /* transform: translateY(20px); */
+    }
+    75%{
+        transform: translate(305px,-200px);
+        /* transform: translateY(20px); */
+    }
+    100%{
+        transform: translate(0px,0px);
+        /* transform: translateY(20px); */
+    }
+}
+.rocket-to-mars{
+    height: 200px;
+    width: 200px;
+    top: 15%;
+    left: -300px;
+    animation-name: rocket-fly;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+}
+.left-pic {
+    transform: scale(1.5);
+    transition-duration: 2s;
+    position: relative;
+    top: 25%;
+    left: -35%;
+  }
+
 @media screen and (min-width: 769px) {
   img:hover {
     transform: scale(1.3);
@@ -145,13 +206,36 @@ body {
     right: -25%;
     width: 110%;
   }
+  .left-pic:hover {
+    transform: scale(1.8);
+    transition-duration: 2s;
+    position: relative;
+  }
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
 
-  .left-pic{
+@media screen and (max-width: 769px) {
+  .left-pic {
     transform: scale(1);
     transition-duration: 2s;
     position: relative;
-    top: 12%;
-    left: -25%;
-    width: 110%;
+    top: 5%;
+    left: -155%;
   }
+  @keyframes rocket-fly {
+    0%{
+        transform: translate(-150px,0px);
+    }
+    50%{
+        transform: translate(205px,-80px);
+        /* transform: translateY(20px); */
+    }
+    100%{
+        transform: translate(-150px,0px);
+        /* transform: translateY(20px); */
+    }
+}
 }
