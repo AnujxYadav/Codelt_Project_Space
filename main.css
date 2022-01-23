@@ -11,14 +11,28 @@ body {
   overflow-x: hidden;
 }
 
-.bg-space {
-  background-image: url("https://user-images.githubusercontent.com/76813122/150682239-7d009507-013b-4bd9-9573-758f6d725fe5.jpg");
-  background-repeat: repeat;
+
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+@keyframes animatedBackground2 {
+    from { background-position: 100% 0; }
+    to { background-position: 0% 0; }
+}
+.bg-space   { 
+    background-image: url("https://user-images.githubusercontent.com/76813122/150682239-7d009507-013b-4bd9-9573-758f6d725fe5.jpg");
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+    animation-fill-mode: forwards;
 }
 
 .bg-space-red {
-  background-image: url("/Images/red-space-bg.jpeg");
-  background-repeat: repeat;
+  background-image: url("https://user-images.githubusercontent.com/76813122/150682719-334d6751-3f66-4278-9a6f-76e2b56a19f5.jpg");
+  background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground2 200s linear infinite;
 }
 
 .tranparent-bg {
@@ -98,6 +112,12 @@ body {
   letter-spacing: auto;
 }
 
+.title-style-red {
+  font-family: "Orbitron", sans-serif;
+  transition-duration: 0.3s;
+  letter-spacing: auto;
+}
+
 .title-style:hover {
   transition-duration: 0.3s;
   letter-spacing: 4px;
@@ -109,6 +129,7 @@ body {
   transition-duration: 0.3s;
   letter-spacing: 4px;
   font-weight: 500;
+  color: rgb(194, 78, 25);
 }
 
 @media screen and (min-width: 769px) {
@@ -122,6 +143,15 @@ body {
     position: relative;
     top: 12%;
     right: -25%;
+    width: 110%;
+  }
+
+  .left-pic{
+    transform: scale(1);
+    transition-duration: 2s;
+    position: relative;
+    top: 12%;
+    left: -25%;
     width: 110%;
   }
 }
