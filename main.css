@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap");
 
 * {
   /* border: 1px solid white; */
@@ -11,22 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-@keyframes animatedBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 0;
-  }
-}
-@keyframes animatedBackground2 {
-  from {
-    background-position: 100% 0;
-  }
-  to {
-    background-position: 0% 0;
-  }
-}
 .bg-space {
   background-image: url("https://user-images.githubusercontent.com/76813122/150682239-7d009507-013b-4bd9-9573-758f6d725fe5.jpg");
   background-position: 0px 0px;
@@ -84,12 +69,28 @@ body {
 }
 
 .quote {
-  margin-top: 120px;
+  margin-top: 100px;
   color: rgb(255, 255, 255);
   font-family: "Dancing Script", cursive;
   background-color: rgba(200, 196, 255, 0);
   font-size: 29px;
   transform: skewX(-17deg);
+  transition-duration: 0.5s;
+}
+
+.quote-mars {
+  margin-top: 60px;
+  color: rgb(255, 255, 255);
+  font-family: "Dancing Script", cursive;
+  background-color: rgba(200, 196, 255, 0);
+  font-size: 29px;
+  transform: skewX(-17deg);
+  transition-duration: 0.5s;
+}
+
+.quote-mars:hover {
+  transition-duration: 0.5s;
+  transform: translateY(-5px);
 }
 
 .quote:hover {
@@ -103,6 +104,20 @@ body {
   background-color: rgba(69, 126, 201, 0.1);
   border-radius: 10px;
   font-size: 20px;
+}
+
+.card-mars {
+  margin-top: 10%;
+  transition-duration: 0.9s;
+  background-color: rgba(69, 126, 201, 0.1);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.card-mars:hover {
+  transition-duration: 0.9s;
+  background-color: rgba(69, 126, 201, 0.2);
+  transform: scale(1.01);
 }
 
 .card:hover {
@@ -153,45 +168,179 @@ body {
   color: rgb(0, 0, 0);
 }
 
+.rocket-to-mars {
+  height: 200px;
+  width: 200px;
+  top: 15%;
+  left: -300px;
+  animation-name: rocket-fly;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+}
+.bottom {
+  transform: scale(1.5);
+  transition-duration: 2s;
+  position: relative;
+  top: 25%;
+  left: -35%;
+}
+
+.title-in-box {
+  padding: 0px;
+  margin-top: 4%;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.details-in-box {
+  padding: 0px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-family: "Philosopher", sans-serif;
+  font-size: 20px;
+  transition-duration: 0.45s;
+}
+
+.details-in-box:hover {
+  padding: 0px;
+  letter-spacing: 4px;
+  font-weight: bolder;
+  font-family: "Philosopher", sans-serif;
+  font-size: 20px;
+  transition-duration: 0.35s;
+  color: rgb(194, 78, 25);
+}
+
+hr {
+  transform: scaleY(3);
+}
 
 
-@keyframes rocket-fly {
-    0%{
-        transform: translate(0px,0px);
-    }
-    25%{
-        transform: translate(205px,-80px);
-        /* transform: translateY(20px); */
-    }
-    50%{
-        transform: translate(255px,-120px);
-        /* transform: translateY(20px); */
-    }
-    75%{
-        transform: translate(305px,-200px);
-        /* transform: translateY(20px); */
-    }
-    100%{
-        transform: translate(0px,0px);
-        /* transform: translateY(20px); */
-    }
-}
-.rocket-to-mars{
-    height: 200px;
-    width: 200px;
-    top: 15%;
-    left: -300px;
-    animation-name: rocket-fly;
-    animation-duration: 35s;
-    animation-iteration-count: infinite;
-}
-.left-pic {
-    transform: scale(1.5);
-    transition-duration: 2s;
+/* Animations */
+
+.drop-up{
     position: relative;
-    top: 25%;
-    left: -35%;
-  }
+    animation-name: drop-up;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop-up {
+    from{
+        top: -50px
+    }
+    to{
+        top: 0px;
+    }
+}
+
+.drop-left{
+    position: relative;
+    animation-name: drop-left;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop-left {
+    from{
+        left: -250px
+    }
+    to{
+        left: 0px;
+    }
+}
+
+.drop-out{
+    position: relative;
+    animation-name: drop-out;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop-out {
+    from{
+        transform: scale(0.01);
+    }
+    to{
+        scale: (1);
+    }
+}
+
+.drop-in{
+    position: relative;
+    animation-name: drop-in;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop-in {
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        scale: (1);
+    }
+}
+
+.drop-right{
+    position: relative;
+    animation-name: drop-right;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop-right {
+    from{
+        right: -250px
+    }
+    to{
+        right: 0px;
+    }
+}
+
+.drop-down{
+    position: relative;
+    animation-name: drop-bottom;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop-bottom {
+    from{
+        bottom: -250px
+    }
+    to{
+        bottom: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media */
 
 @media screen and (min-width: 769px) {
   img:hover {
@@ -206,7 +355,7 @@ body {
     right: -25%;
     width: 110%;
   }
-  .left-pic:hover {
+  .bottom:hover {
     transform: scale(1.8);
     transition-duration: 2s;
     position: relative;
@@ -218,7 +367,7 @@ body {
 }
 
 @media screen and (max-width: 769px) {
-  .left-pic {
+  .bottom {
     transform: scale(1);
     transition-duration: 2s;
     position: relative;
@@ -226,16 +375,68 @@ body {
     left: -155%;
   }
   @keyframes rocket-fly {
-    0%{
-        transform: translate(-150px,0px);
+    0% {
+      transform: translate(-150px, 0px);
     }
-    50%{
-        transform: translate(205px,-80px);
-        /* transform: translateY(20px); */
+    50% {
+      transform: translate(205px, -80px);
+      /* transform: translateY(20px); */
     }
-    100%{
-        transform: translate(-150px,0px);
-        /* transform: translateY(20px); */
+    100% {
+      transform: translate(-150px, 0px);
+      /* transform: translateY(20px); */
     }
+  }
+  body {
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+  }
+  .bg-space {
+    background-image: url("https://user-images.githubusercontent.com/76813122/150682239-7d009507-013b-4bd9-9573-758f6d725fe5.jpg");
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+    animation-fill-mode: forwards;
+  }
 }
+
+/* Key Frames */
+
+@keyframes rocket-fly {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(205px, -80px);
+    /* transform: translateY(20px); */
+  }
+  50% {
+    transform: translate(255px, -120px);
+    /* transform: translateY(20px); */
+  }
+  75% {
+    transform: translate(305px, -200px);
+    /* transform: translateY(20px); */
+  }
+  100% {
+    transform: translate(0px, 0px);
+    /* transform: translateY(20px); */
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes animatedBackground2 {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0% 0;
+  }
 }
