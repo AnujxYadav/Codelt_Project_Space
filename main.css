@@ -7,15 +7,10 @@
   /* border: 1px solid white; */
 }
 
-body {
-  /* overflow-y: hidden; */
-  overflow-x: hidden;
-}
-
 .bg-space {
   background-image: url("https://user-images.githubusercontent.com/76813122/150682239-7d009507-013b-4bd9-9573-758f6d725fe5.jpg");
   background-position: 0px 0px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   animation: animatedBackground 40s linear infinite;
   animation-fill-mode: forwards;
 }
@@ -23,15 +18,21 @@ body {
 .bg-space-red {
   background-image: url("https://user-images.githubusercontent.com/76813122/150764357-55caf823-d4e5-4fa6-bee3-794213fbf0fa.jpg");
   background-position: 0px 0px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   animation: animatedBackground2 200s linear infinite;
 }
 
 .bg-space-members {
   background-image: url("https://user-images.githubusercontent.com/76813122/150688658-68aa1a75-d868-46a0-829a-29a5139bb0e5.jpg");
   background-position: 0px 0px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   animation: animatedBackground 150s linear infinite;
+  /* background-size: cover; */
+}
+
+.bg-space-book{
+  background-image: url("https://user-images.githubusercontent.com/76813122/150794095-dc03735d-8be5-465f-855e-21df4cd624fb.jpg");
+  background-size: cover;
 }
 
 .tranparent-bg {
@@ -221,127 +222,26 @@ hr {
   transform: scaleY(3);
 }
 
-
-/* Animations */
-
-.drop-up{
-    position: relative;
-    animation-name: drop-up;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+form{
+  background-color: rgba(27, 27, 26, 0.486);
+  margin: 30px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 20px;
 }
 
-@keyframes drop-up {
-    from{
-        top: -150px
-    }
-    to{
-        top: 0px;
-    }
+.test-sg{
+  position: relative;
+  width: 550px;
+  margin-top: 70px;
+  padding: 10px 50px;
+  padding-bottom: 30px;
 }
 
-.drop-left{
-    position: relative;
-    animation-name: drop-left;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.btn{
+  margin-left: 152px;
 }
-
-@keyframes drop-left {
-    from{
-        left: -250px
-    }
-    to{
-        left: 0px;
-    }
-}
-
-.drop-out{
-    position: relative;
-    animation-name: drop-out;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes drop-out {
-    from{
-        transform: scale(0.01);
-    }
-    to{
-        scale: (1);
-    }
-}
-
-.drop-in{
-    position: relative;
-    animation-name: drop-in;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes drop-in {
-    from{
-        transform: scale(1.2);
-    }
-    to{
-        scale: (1);
-    }
-}
-
-.drop-right{
-    position: relative;
-    animation-name: drop-right;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes drop-right {
-    from{
-        right: -250px
-    }
-    to{
-        right: 0px;
-    }
-}
-
-.drop-down{
-    position: relative;
-    animation-name: drop-bottom;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes drop-bottom {
-    from{
-        bottom: -250px
-    }
-    to{
-        bottom: 0px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -370,6 +270,130 @@ hr {
     overflow-y: hidden;
     overflow-x: hidden;
   }
+  @keyframes rocket-fly {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    25% {
+      transform: translate(205px, -80px);
+      /* transform: translateY(20px); */
+    }
+    50% {
+      transform: translate(355px, -120px);
+      /* transform: translateY(20px); */
+    }
+    75% {
+      transform: translate(255px, -200px);
+      /* transform: translateY(20px); */
+    }
+    100% {
+      transform: translate(0px, 0px);
+      /* transform: translateY(20px); */
+    }
+  }
+  /* Animations */
+
+  .drop-up {
+    position: relative;
+    animation-name: drop-up;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes drop-up {
+    from {
+      top: -150px;
+    }
+    to {
+      top: 0px;
+    }
+  }
+
+  .drop-left {
+    position: relative;
+    animation-name: drop-left;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes drop-left {
+    from {
+      left: -250px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+
+  .drop-out {
+    position: relative;
+    animation-name: drop-out;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes drop-out {
+    from {
+      transform: scale(0.01);
+    }
+    to {
+      scale: (1);
+    }
+  }
+
+  .drop-in {
+    position: relative;
+    animation-name: drop-in;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes drop-in {
+    from {
+      transform: scale(1.2);
+    }
+    to {
+      scale: (1);
+    }
+  }
+
+  .drop-right {
+    position: relative;
+    animation-name: drop-right;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes drop-right {
+    from {
+      right: -250px;
+    }
+    to {
+      right: 0px;
+    }
+  }
+
+  .drop-down {
+    position: relative;
+    animation-name: drop-bottom;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes drop-bottom {
+    from {
+      bottom: -250px;
+    }
+    to {
+      bottom: 0px;
+    }
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -385,7 +409,7 @@ hr {
       transform: translate(-150px, 0px);
     }
     50% {
-      transform: translate(205px, -80px);
+      transform: translate(105px, -80px);
       /* transform: translateY(20px); */
     }
     100% {
@@ -404,31 +428,17 @@ hr {
     animation: animatedBackground 40s linear infinite;
     animation-fill-mode: forwards;
   }
+  .left-pic {
+    position: relative;
+    left: -600px;
+    top: 10%;
+  }
+  .bg-space-red {
+    height: 1000px;
+  }
 }
 
 /* Key Frames */
-
-@keyframes rocket-fly {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(205px, -80px);
-    /* transform: translateY(20px); */
-  }
-  50% {
-    transform: translate(355px, -120px);
-    /* transform: translateY(20px); */
-  }
-  75% {
-    transform: translate(255px, -200px);
-    /* transform: translateY(20px); */
-  }
-  100% {
-    transform: translate(0px, 0px);
-    /* transform: translateY(20px); */
-  }
-}
 
 @keyframes animatedBackground {
   from {
