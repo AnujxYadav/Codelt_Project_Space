@@ -30,7 +30,7 @@
   /* background-size: cover; */
 }
 
-.bg-space-book{
+.bg-space-book {
   background-image: url("https://user-images.githubusercontent.com/76813122/150794095-dc03735d-8be5-465f-855e-21df4cd624fb.jpg");
   background-size: cover;
 }
@@ -222,29 +222,9 @@ hr {
   transform: scaleY(3);
 }
 
-form{
-  background-color: rgba(27, 27, 26, 0.486);
-  margin: 30px;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  border-radius: 20px;
+.btn2 {
+  text-align: center;
 }
-
-.test-sg{
-  position: relative;
-  width: 550px;
-  margin-top: 70px;
-  padding: 10px 50px;
-  padding-bottom: 30px;
-}
-
-.btn{
-  margin-left: 152px;
-}
-
-
-
 
 /* Media */
 
@@ -394,6 +374,23 @@ form{
       bottom: 0px;
     }
   }
+
+  form {
+    background-color: rgba(27, 27, 26, 0.486);
+    margin: 30px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+
+  .test-sg {
+    position: relative;
+    width: 550px;
+    margin-top: 70px;
+    padding: 10px 50px;
+    padding-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -435,6 +432,20 @@ form{
   }
   .bg-space-red {
     height: 1000px;
+  }
+  form {
+    background-color: rgba(27, 27, 26, 0.486);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+
+  .test-sg {
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+    padding: 10px 10px;
+    padding-bottom: 30px;
   }
 }
 
